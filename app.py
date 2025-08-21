@@ -21,8 +21,8 @@ if st.sidebar.button("Predict Churn"):
         "Total_Purchase": total_purchase,
         "Account_Manager": account_manager,
         "Years": years,
-        "Num_Sites": num_sites
-        "churn" : churn # Assuming Churn is not needed for prediction, you can remove it if not required
+        "Num_Sites": num_sites,
+        "Churn" : churn # Assuming Churn is not needed for prediction, you can remove it if not required
     }
     try:
         response = requests.post(API_URL, json=payload, timeout=10)
