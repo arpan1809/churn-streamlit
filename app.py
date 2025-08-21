@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Use the ngrok URL for your FastAPI
-API_URL = "https://b057b4a0a773.ngrok-free.app/"
+API_URL = "https://b057b4a0a773.ngrok-free.app/predict"
 
 st.title("📊 Customer Churn Prediction (via FastAPI)")
 
