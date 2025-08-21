@@ -13,6 +13,7 @@ total_purchase = st.sidebar.number_input("Total Purchase", min_value=0.0, value=
 account_manager = st.sidebar.selectbox("Has Account Manager?", [0, 1])
 years = st.sidebar.number_input("Years with Company", min_value=0.0, value=3.0)
 num_sites = st.sidebar.number_input("Number of Sites", min_value=0, value=5)
+churn = st.sidebar.selectbox("Churn (for display only)", [0, 1], index=0)
 
 if st.sidebar.button("Predict Churn"):
     payload = {
@@ -21,6 +22,7 @@ if st.sidebar.button("Predict Churn"):
         "Account_Manager": account_manager,
         "Years": years,
         "Num_Sites": num_sites
+        "churn" : churn # Assuming Churn is not needed for prediction, you can remove it if not required
     }
     try:
         response = requests.post(API_URL, json=payload, timeout=10)
